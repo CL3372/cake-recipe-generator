@@ -52,6 +52,10 @@ form {
   border: 0px;
 }
 
+.recipe strong {
+  color: rgb(243, 117, 117);
+}
+
 .recipe {
   background-color: rgb(231, 187, 129);
   width: 80%;
