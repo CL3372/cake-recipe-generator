@@ -14,20 +14,23 @@
   <body>
     <div class="container"></div>
     <header>
-      <h1>🍰 Welcome to Cake recipe generator 🍰</h1>
+      <h1>🍰 Welcome to the Dessert recipe generator 🍰</h1>
     </header>
 
     <main>
-      <form id="recipe-generator-form">
-        <input
-          type="text"
-          placeholder="Enter the flavor you want"
-          class="instructions"
-          id="user-instructions"
-        />
-        <input type="submit" class="submit-button" />
-      </form>
-      <div class="recipe" id="recipe"></div>
+      <div class="form-container">
+        <form id="recipe-generator-form">
+          <input
+            type="text"
+            placeholder="Choose your dessert..."
+            class="instructions"
+            id="user-instructions"
+          />
+          <input type="submit" class="submit-button" />
+        </form>
+        <div class="hint">i.e: Bolos, doces...</div>
+      </div>
+      <div class="recipe hidden" id="recipe"></div>
     </main>
     <footer>
       This project was coded by

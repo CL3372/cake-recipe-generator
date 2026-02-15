@@ -20,19 +20,28 @@ h1 {
   font-weight: 800;
 }
 
+.form-container {
+  padding: 30px;
+  background-color: rgb(231, 187, 129);
+  box-shadow: 0px 60px 60px 0px rgba(65, 50, 100, 0.1);
+  border-radius: 15px;
+  margin-bottom: 40px;
+}
+
 header {
   margin-bottom: 30px;
 }
 
 form {
-  padding: 30px;
-  background-color: rgb(231, 187, 129);
-  box-shadow: 0px 60px 60px 0px rgba(65, 50, 100, 0.1);
-  border-radius: 15px;
   display: flex;
-  margin-bottom: 40px;
 }
 
+.hint {
+  line-height: 1.5px;
+  font-size: 15px;
+  margin-top: 10px;
+  opacity: 0.8;
+}
 .instructions {
   padding: 20px;
   width: 80%;
@@ -50,6 +59,10 @@ form {
   border-radius: 15px;
   cursor: pointer;
   border: 0px;
+}
+
+.hidden {
+  display: none;
 }
 
 .recipe strong {
@@ -77,4 +90,19 @@ footer {
   text-align: center;
   margin-top: 30px;
   font-size: 15px;
+}
+
+.generating {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }

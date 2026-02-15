@@ -15,8 +15,12 @@ function generateRecipe(event) {
   let apiKey = "aa9340df384978aa7t1a53a8fabcc2o1";
   let prompt = `User instructions: generate a cake recipe ${instructionsInput.value}`;
   let context =
-    "You are a Pastry Chef and love baking cakes. Your mission is to write a recipe in basic HTML  make sure to follow instructions below, sign the recipe 'Carla Louro' inside a <strong> element at the end of the recipe";
+    "You are a Pastry Chef and love baking cakes. Your mission is to write a recipe in basic HTML  make sure to follow instructions below, sign the recipe 'CARLA LOURO 😊' inside a <strong> element at the end of the recipe";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
+  let recipeElement = document.querySelector("#recipe");
+  recipeElement.classList.remove("hidden");
+  recipeElement.innerHTML = `<div class="generating">⏳Generating Recipe...⌛${instructionsInput.value}</div>`;
 
   console.log("Generating recipe");
   console.log(`Prompt: ${prompt}`);
@@ -26,8 +30,6 @@ function generateRecipe(event) {
 }
 
 let recipeElement = document.querySelector("#recipe");
-
-alert("generating recipe");
 
 let recipeFormElement = document.querySelector("#recipe-generator-form");
 recipeFormElement.addEventListener("submit", generateRecipe);
